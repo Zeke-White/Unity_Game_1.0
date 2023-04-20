@@ -242,8 +242,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6d31b02bbf226498cb1ae2caae5b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
   rigidBody: {fileID: 463050596}
+  moveSpeed: 10
+  dashMoveSpeed: 30
+  dashCoolDown: 0.5
+  dashLength: 0.2
+  dashCoolDownCounter: 0
+  dashCounter: 0
 --- !u!1 &735667988
 GameObject:
   m_ObjectHideFlags: 0
