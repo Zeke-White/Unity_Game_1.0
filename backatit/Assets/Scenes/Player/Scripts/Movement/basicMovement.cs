@@ -36,6 +36,8 @@ public class basicMovement : MonoBehaviour
             if(dashCoolDownCounter <= 0 && dashCounter <= 0){
                 activeMoveSpeed = dashMoveSpeed;
                 dashCounter = dashLength;
+                Physics2D.IgnoreLayerCollision(3, 6, true);
+
             }
         }
         
@@ -43,6 +45,7 @@ public class basicMovement : MonoBehaviour
             dashCounter -= Time.deltaTime;
 
             if (dashCounter <= 0){
+                Physics2D.IgnoreLayerCollision(3, 6, false);
                 activeMoveSpeed = moveSpeed;
                 dashCoolDownCounter = dashCoolDown;
             }
