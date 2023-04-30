@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Low Wall
   - High Wall
+  - Spike
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Player
   - Water
   - UI
-  - low-wall
+  - can-dash-over
   - 
   - 
   - 
