@@ -136,7 +136,8 @@ GameObject:
   - component: {fileID: 463050596}
   - component: {fileID: 463050597}
   - component: {fileID: 463050599}
-  - component: {fileID: 463050600}
+  - component: {fileID: 463050601}
+  - component: {fileID: 463050602}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -185,8 +186,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.031016383, g: 0.38679248, b: 0.14809582, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 629dd91305a564b4da2d80972e822876, type: 3}
+  m_Color: {r: 0.49803925, g: 0.49803925, b: 0.49803925, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -203,9 +204,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463050593}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3505, y: 0.215, z: 0}
-  m_LocalScale: {x: 1.5, y: 2, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.855, y: 0.4427, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -265,8 +266,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   Object: {fileID: 463050593}
---- !u!61 &463050600
-BoxCollider2D:
+--- !u!114 &463050601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463050593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5bdb58a43255491e9a6131741e9a447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &463050602
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -278,19 +291,35 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.0006169055, y: 0.06604369}
+      - {x: -0.05348301, y: 0.060461156}
+      - {x: -0.09488266, y: 0.037371878}
+      - {x: -0.13906553, y: 0.033713587}
+      - {x: -0.16, y: 0.02129175}
+      - {x: -0.1697694, y: 0.004544166}
+      - {x: -0.15302184, y: -0.034417477}
+      - {x: -0.12035538, y: -0.030884765}
+      - {x: -0.09023057, y: -0.05023058}
+      - {x: -0.054796815, y: -0.045553997}
+      - {x: -0.04535193, y: -0.06464806}
+      - {x: -0.0021167016, y: -0.06528485}
+      - {x: 0.03535194, y: -0.05906551}
+      - {x: 0.0631125, y: -0.03984976}
+      - {x: 0.16279127, y: -0.046274252}
+      - {x: 0.16139562, y: 0.043021843}
+      - {x: 0.053252432, y: 0.04231794}
 --- !u!1 &724595627
 GameObject:
   m_ObjectHideFlags: 0
