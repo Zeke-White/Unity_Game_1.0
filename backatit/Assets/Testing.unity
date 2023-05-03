@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+  Object: {fileID: 463050593}
 --- !u!61 &463050600
 BoxCollider2D:
   m_ObjectHideFlags: 0
