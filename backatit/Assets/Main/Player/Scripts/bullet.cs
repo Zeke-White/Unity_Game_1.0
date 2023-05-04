@@ -13,6 +13,7 @@ public class bullet : MonoBehaviour
 
     private void Update() {
         
+        
         if (Input.GetButton("Fire1")){
             if(coolDown <= Time.time){
                 shoot();
@@ -22,10 +23,11 @@ public class bullet : MonoBehaviour
     }
     private void shoot(){
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = transform.position - mousePos;
         Rigidbody2D clone;
         Debug.Log(transform.rotation);
         clone = Instantiate(BulletPre, transform.position, transform.rotation);
-        clone.velocity = transform.TransformDirection(transform.right * moveSpeed);
+        clone.velocity = -(direction * moveSpeed);
 
         coolDown = Time.time + coolDownTime;
     }
