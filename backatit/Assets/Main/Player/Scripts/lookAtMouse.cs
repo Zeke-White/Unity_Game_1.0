@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class lookAtMouse : MonoBehaviour
 {
+    public float rotationalSpeed = 45f;
     void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -12,6 +13,8 @@ public class lookAtMouse : MonoBehaviour
         Vector2 direction = mousePos - transform.position;
 
         float angle = Vector2.SignedAngle(Vector2.right, direction);
-        transform.eulerAngles = new Vector3 (0, 0, angle);
+        Vector3 targetRotation = new Vector3(0, 0, angle);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetRotation), rotationalSpeed * Time.deltaTime);
+
     }
 }
