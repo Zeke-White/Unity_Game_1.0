@@ -10,7 +10,6 @@ public class Health : MonoBehaviour
 
     public void damage(int dmg){
         hp -= dmg;
-        Debug.Log("oww");
     }
 
     public void Update() {

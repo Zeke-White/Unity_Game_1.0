@@ -14,7 +14,6 @@ public class Spikes : MonoBehaviour
 
     
     void OnTriggerEnter2D(Collider2D collision){
-        Debug.Log("S");
         if(collision.gameObject.CompareTag("Player")) {
             health.damage(1);
         }

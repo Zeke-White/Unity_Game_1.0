@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class firePoint : MonoBehaviour
 {
     public float coolDown;
     public float coolDownTime = 2f;
     public Rigidbody2D BulletPre;
     public float attackSpeed = 10f;
     public float moveSpeed = 100f;
+    
     
 
     private void Update() {
@@ -20,16 +21,16 @@ public class bullet : MonoBehaviour
             }
         }
 
+
     }
     private void shoot(){
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = transform.position - mousePos;
         Rigidbody2D clone;
-        Debug.Log(transform.rotation);
         clone = Instantiate(BulletPre, transform.position, transform.rotation);
         clone.velocity = -(direction * moveSpeed);
 
         coolDown = Time.time + coolDownTime;
+        
     }
-
 }
