@@ -9,17 +9,30 @@ public class missle : MonoBehaviour
     public float armTime = 2f;
     public float armTimer;
 
+    public float speed = 2f;
+    private Transform player;
+
     public BoxCollider2D missleCollider;
 
     private void Awake() {
         Destroy(this.gameObject, missleDecay);
         armTimer = Time.time + armTime;
+        
     }
 
     private void Update() {
         if(armTimer <= Time.time){
             missleCollider.enabled = true;
         }
+        chasePlayer();
+
+    }
+
+    private void chasePlayer(){
+        
+        this.player = GameObject.FindWithTag("Player").transform;
+        var target = player.position;
+        transform.position = Vector2.MoveTowards(transform.position, target, speed);
     }
 
     void OnCollisionEnter2D(Collision2D other){

@@ -127,4 +127,5 @@ MonoBehaviour:
   missleDecay: 10
   armTime: 2
   armTimer: 0
+  speed: 0.005
   missleCollider: {fileID: 6482297997250338431}
