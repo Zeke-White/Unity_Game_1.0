@@ -9,7 +9,8 @@ public class bullet : MonoBehaviour
     private void Awake() {
         Destroy(this.gameObject, bulletDecay);
     }
-    private void OnTriggerEnter2D(Collider2D other) {
+
+    void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.CompareTag("Player")) {
             
         }
