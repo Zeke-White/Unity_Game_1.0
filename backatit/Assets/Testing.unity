@@ -357,7 +357,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &463050597
@@ -1338,7 +1338,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 7
-  player: {fileID: 463050602}
+  reloadCoolDown: 2
+  reloadTime: 0
+  numMissle: 3
+  misslePre: {fileID: 2977566061380074633, guid: d65ae505f884148798f41e45f6f58d3c, type: 3}
 --- !u!58 &1352265820
 CircleCollider2D:
   m_ObjectHideFlags: 0
