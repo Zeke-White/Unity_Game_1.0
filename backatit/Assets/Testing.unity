@@ -1318,7 +1318,7 @@ GameObject:
   - component: {fileID: 1352265819}
   - component: {fileID: 1352265824}
   - component: {fileID: 1352265823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1338,6 +1338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 7
+  player: {fileID: 463050602}
 --- !u!58 &1352265820
 CircleCollider2D:
   m_ObjectHideFlags: 0
