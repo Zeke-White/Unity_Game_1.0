@@ -20,7 +20,7 @@ public class bullet : MonoBehaviour
                 health.damage(1);
             }
             catch{
-                Debug.Log("No health script");
+                //Debug.Log("No health script");
             }
             Destroy(this.gameObject);
         }

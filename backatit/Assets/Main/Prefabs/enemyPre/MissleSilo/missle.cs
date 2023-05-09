@@ -17,32 +17,27 @@ public class missle : MonoBehaviour
     private void Awake() {
         Destroy(this.gameObject, missleDecay);
         armTimer = Time.time + armTime;
-        
     }
 
     private void Update() {
-        if(armTimer <= Time.time){
+        if (armTimer <= Time.time) {
             missleCollider.enabled = true;
         }
         chasePlayer();
-
     }
 
     private void chasePlayer(){
-        
         this.player = GameObject.FindWithTag("Player").transform;
         var target = player.position;
         transform.position = Vector2.MoveTowards(transform.position, target, speed);
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-
-        try{
+        try {
             health = collision.gameObject.GetComponent<Health>();
             health.damage(1);
-        }
-        catch{
-            Debug.Log("No health script, Missle");
+        } catch {
+            //Debug.Log("No health script, Missle");
         }
         Destroy(this.gameObject);
     }
