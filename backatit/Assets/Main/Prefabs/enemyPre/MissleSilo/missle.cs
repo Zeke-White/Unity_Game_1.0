@@ -35,14 +35,14 @@ public class missle : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, target, speed);
     }
 
-    void OnCollisionEnter2D(Collision2D other){
+    void OnCollisionEnter2D(Collision2D collision){
 
         try{
-            health = other.gameObject.GetComponent<Health>();
+            health = collision.gameObject.GetComponent<Health>();
             health.damage(1);
         }
         catch{
-            Debug.Log("No health script");
+            Debug.Log("No health script, Missle");
         }
         Destroy(this.gameObject);
     }
