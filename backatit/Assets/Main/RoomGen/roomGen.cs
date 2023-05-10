@@ -32,7 +32,6 @@ public class roomGen : MonoBehaviour
                 player.transform.position = landingPad.transform.position;
                 this.transform.position = placeHolder.transform.position;
                 Destroy(placeHolder);
-                
                 SceneManager.SetActiveScene(SceneManager.GetSceneByName(nextScene));
                 currentScene = nextScene;
                 
