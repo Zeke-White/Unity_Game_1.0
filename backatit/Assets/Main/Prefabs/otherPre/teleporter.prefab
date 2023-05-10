@@ -105,9 +105,6 @@ MonoBehaviour:
   - room-1
   - room-2
   - room-3
-  port: {fileID: 5098273348976774322}
-  armTime: 2
-  armTimer: 0
 --- !u!61 &5098273348976774322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +112,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6297611152640213083}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1

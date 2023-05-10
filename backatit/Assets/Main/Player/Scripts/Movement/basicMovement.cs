@@ -20,7 +20,9 @@ public class basicMovement : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    
+    {   
+        DontDestroyOnLoad(this.gameObject);
         activeMoveSpeed = moveSpeed;
     }
 
