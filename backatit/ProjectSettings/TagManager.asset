@@ -7,6 +7,9 @@ TagManager:
   - Low Wall
   - High Wall
   - Spike
+  - Teleporter
+  - landingPad
+  - TeleporterPlaceHolder
   layers:
   - Default
   - TransparentFX
