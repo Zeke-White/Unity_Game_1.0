@@ -24,11 +24,9 @@ public class firePoint : MonoBehaviour
 
     }
     private void shoot(){
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = transform.position - mousePos;
         Rigidbody2D clone;
         clone = Instantiate(BulletPre, transform.position, transform.rotation);
-        clone.velocity = -(direction * moveSpeed);
+        clone.velocity = transform.right * moveSpeed;
 
         coolDown = Time.time + coolDownTime;
         

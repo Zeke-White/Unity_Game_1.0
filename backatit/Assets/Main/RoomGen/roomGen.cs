@@ -24,9 +24,9 @@ public class roomGen : MonoBehaviour
     }
 
     IEnumerator tryLoad(){
-        while(currentScene != nextScene) {   
+        while (currentScene != nextScene) {   
             yield return new WaitForSeconds(.01f);
-            try{
+            try {
                 placeHolder = GameObject.FindGameObjectWithTag("TeleporterPlaceHolder");
                 landingPad = GameObject.FindGameObjectWithTag("landingPad");
                 player.transform.position = landingPad.transform.position;
@@ -34,14 +34,13 @@ public class roomGen : MonoBehaviour
                 Destroy(placeHolder);
                 SceneManager.SetActiveScene(SceneManager.GetSceneByName(nextScene));
                 currentScene = nextScene;
-                
             } catch {
                 Debug.Log("Not done loading");
             }
         }
         var nextSceneNum = Random.Range(0, roomList.Length);
         nextScene = roomList[nextSceneNum];
-        while(nextScene == currentScene){
+        while (nextScene == currentScene){
             nextSceneNum = Random.Range(0, roomList.Length);
             nextScene = roomList[nextSceneNum];
         }  

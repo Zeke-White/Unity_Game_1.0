@@ -6,8 +6,9 @@ public class bullet : MonoBehaviour
 {
     public float bulletDecay = 10f;
     private Health health;   
+
     private void Awake() {
-        Destroy(this.gameObject, bulletDecay);
+        Destroy(this.gameObject, bulletDecay); 
     }
 
     void OnCollisionEnter2D(Collision2D other){
